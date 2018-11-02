@@ -42,14 +42,16 @@ function lookup(){
 			var a = z.firstChild;
 			
 			if(type == "all"){
+				var t = 0;
 				for (var j = 0; j < z.childNodes.length; j++) {
   					// Process only element nodes (type 1)
   					if (a.nodeType == 1){
   						if(a.nodeName != "date")
-  							content +=  "<br/>" + s + ": " + a.childNodes[0].nodeValue;
+  							t += parseFloat(a.childNodes[0].nodeValue);
   					}
   					a = a.nextSibling;
   				}
+  				content +=  "<br/>" + s + ": " + t;
 			}
 			
 			if(type != "all"){
