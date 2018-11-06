@@ -26,16 +26,27 @@ function lookup(){
 
     $('#searchresults').empty();
     
-    var year = $("#year").val();
+    //var year = $("#year").val();
     var type = $("#type").val();
+    var state = $("#state").val();
+    var from = $("#from").val();
+    var to = $("#to").val();
+    to = parseInt(to) + parseInt(1);
+    console.log("to is: "+to);
+    
     
     var data = [];
     var backupData = [];
+    var yearData = [];
     
-    content = year + " " + type;
+    //content = year + " " + type;
     
     var d = beerXML.getElementsByTagName("date");
     
+    
+    
+for(var year=from; year < to; year++){
+
 	for(var i=0; i < d.length; i++){
 		if(d[i].childNodes[0].nodeValue == year){
 			var z = d[i].parentNode;
@@ -54,9 +65,10 @@ function lookup(){
   					}
   					a = a.nextSibling;
   				}
-  				content +=  "<br/>" + s + ": " + t;
+  				//content +=  "<br/>" + s + ": " + t;
   				data.push(t);
   				backupData.push(Math.log10(t));
+  				console.log("0st entry: "+data[0]);
 			}
 			
 			if(type != "all"){
@@ -64,21 +76,39 @@ function lookup(){
   					// Process only element nodes (type 1)
   					if (a.nodeType == 1){
   						if(a.nodeName == type)
-    						content +=  "<br/>" + s + ": "  + a.childNodes[0].nodeValue;
+    						//content +=  "<br/>" + s + ": "  + a.childNodes[0].nodeValue;
     						data.push(a.childNodes[0].nodeValue);
-  							backupData.push(Math.log10(a.childNodes[0].nodeValue));
+  							//backupData.push(Math.log10(a.childNodes[0].nodeValue));
     				}
   					a = a.nextSibling;
 				}
 			}
+		yearData[year] = data;
 		}
+
 	}
+data = [];
+}
+
+		var finalOut = 0;
+		for(var year=from; year < to; year++){
+			finalOut = (parseFloat(finalOut) + parseFloat(yearData[year][state]));
+			console.log("yearData["+year+"]["+state+"] is: "+yearData[year][state]);
+		}
+	
+
+	
+	
     $('#searchresults').append(content);
-    console.log(data);
+    console.log("finalOut: "+finalOut);
     
     $(".chart").empty();
 
+		var height = parseFloat(finalOut)/2000;
+
+    $(".chart").append("<div style=\"height: "+height+"px;\">"+finalOut+" Units</div>");
     
+  /*  
     var width = 1000,
     barHeight = 20;
 
@@ -104,6 +134,8 @@ bar.append("text")
     .attr("y", barHeight / 2)
     .attr("dy", ".35em")
     .text(function(d) { return d; });
+    
+  */  
     
 }
 

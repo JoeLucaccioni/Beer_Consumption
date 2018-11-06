@@ -23,14 +23,15 @@ tr:nth-child(even) {
 }
 
 
-.chart rect {
-  fill: orange;
-}
-
-.chart text {
-  fill: white;
+.chart div {
   font: 10px sans-serif;
-  text-anchor: end;
+  /*background-color: steelblue;*/
+  background-image: url("beerAnimated.gif");
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  color: white;
+  width: 200px;
 }
 
 </STYLE>
