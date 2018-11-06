@@ -26,16 +26,22 @@ function lookup(){
 
     $('#searchresults').empty();
     
-    var year = $("#year").val();
+    //var year = $("#year").val();
     var type = $("#type").val();
+    var state = $("#state").val();
     
     var data = [];
     var backupData = [];
+    var yearData = [];
     
-    content = year + " " + type;
+    //content = year + " " + type;
     
     var d = beerXML.getElementsByTagName("date");
     
+    
+    
+for(var year=2007; year < 2017; year++){
+
 	for(var i=0; i < d.length; i++){
 		if(d[i].childNodes[0].nodeValue == year){
 			var z = d[i].parentNode;
@@ -57,6 +63,7 @@ function lookup(){
   				content +=  "<br/>" + s + ": " + t;
   				data.push(t);
   				backupData.push(Math.log10(t));
+  				console.log("0st entry: "+data[0]);
 			}
 			
 			if(type != "all"){
@@ -71,13 +78,29 @@ function lookup(){
   					a = a.nextSibling;
 				}
 			}
+		yearData[year] = data;
 		}
+
 	}
+
+}
+
+		var finalOut = 0;
+		for(var year=2007; year < 2017; year++){
+			finalOut = (parseFloat(finalOut) + parseFloat(yearData[year][state]));
+			console.log("yearData["+year+"]["+state+"] is: "+yearData[year][state]);
+		}
+	
+
+	
+	
     $('#searchresults').append(content);
-    console.log(data);
+    console.log("finalOut: "+finalOut);
     
     $(".chart").empty();
 
+    
+    
     
     var width = 1000,
     barHeight = 20;
@@ -104,6 +127,8 @@ bar.append("text")
     .attr("y", barHeight / 2)
     .attr("dy", ".35em")
     .text(function(d) { return d; });
+    
+    
     
 }
 
