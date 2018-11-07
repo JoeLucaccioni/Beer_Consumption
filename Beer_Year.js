@@ -62,7 +62,7 @@ function lookup(){
   					}
   					a = a.nextSibling;
   				}
-  				t *= 31;
+  				t *= 31;//a barrel = 31 gallons
   				t = t/population;
   				var b = t.toFixed(3).toString();
   				data.push(b);
@@ -75,7 +75,7 @@ function lookup(){
   					if (a.nodeType == 1){
   						if(a.nodeName == type){
   							var t = parseInt(a.childNodes[0].nodeValue);		
-  							t *= 31;
+  							t *= 31;//a barrel = 31 gallons
   							t = t/population;
   							var b = t.toFixed(3).toString();
   							data.push(b);
@@ -91,16 +91,16 @@ function lookup(){
 }
 
 function makeChart(Data){
-	var x, y;
+	var y;
 	var width = 1000;
 	var height = width;
 	
-	var svg = d3.select("#searchresults")
+	var svg = d3.select("#searchresults")//creates the svg in search results
 		.append("svg")
 		.attr("width", width)
 		.attr("height", height);
     
-	var g = svg.selectAll("g")
+	var g = svg.selectAll("g")//creates the nodes for each state
 		.data(Data)
 		.enter()
 		.append("g")
@@ -108,15 +108,15 @@ function makeChart(Data){
       		return "translate(0,0)";
    		})
 
-	g.append("circle")
-   		.attr("cx", function(d, i) {
+	g.append("circle")//sets the nodes to circles
+   		.attr("cx", function(d, i) {//sets the x location of the circle
    			if(i<9)
             	return i*100 + 50;
             if(i>=9)
             	return (i%9)*100 + 50;
          })
          
-         .attr("cy", function(d, i) {
+         .attr("cy", function(d, i) {//sets the y location of the circle
          	if(i<9)
             	return 100;
             if(i>=9){
@@ -125,7 +125,7 @@ function makeChart(Data){
             	return 125*(y+1);}
          })
   
-         .attr("r", function(d) {
+         .attr("r", function(d) {//sets the radius of the circle
          	if(d<=2)
          		return 2;
          	if((d>2)&&(d<80))
@@ -134,17 +134,17 @@ function makeChart(Data){
          		return 80;
          })
          
-         .attr("fill", "orange")
+         .attr("fill", "orange")//sets the color to orange
             
 	g.append("text")
-		.attr("x", function(d, i) {
+		.attr("x", function(d, i) {//sets x location of the text
             if(i<9)
             	return i*100 + 25;
             if(i>=9)
             	return (i%9)*100 + 25;
          })
          
-         .attr("y", function(d, i) {
+         .attr("y", function(d, i) {//sets y location of the text
          	if(i<9)
             	return 100;
             if(i>=9){
@@ -152,29 +152,13 @@ function makeChart(Data){
             		y = i/9;
             	return 125*(y+1)+5;}
          })
-         .attr("stroke", "teal")
-         .attr("font-size", "10px")
-         .attr("font-family", "sans-serif")
-         .text(function (d, i) {
+         .attr("stroke", "teal")//sets color of text
+         .attr("font-size", "12px")//sets size of text
+         .attr("font-family", "sans-serif")//sets font of text
+         .text(function (d, i) {//creates the text
             console.log("d: " + d);
             console.log("i: " + i);
             return State[i]+": "+d;
          });
 }
-
-/*function makeChart(data){
-    	var paragraph = "";
-    	paragraph = d3.select('#searchresults')
-         .selectAll("p")
-         .data(data)
-         .enter()
-         .append("p")
-         .text(function (d, i) {
-            console.log("d: " + d);
-            console.log("i: " + i);
-            console.log("this: " + this);
-            return "The state is "+state[i]+" and the data is "+d;
-         });
-         
-    
 }*/
