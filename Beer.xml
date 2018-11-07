@@ -2,6 +2,7 @@
 <beer>
 	<state>
 		<symbol>AK</symbol>
+		<population>4802982</population>
 		<year>
 			<date>2007</date>
 			<tavern>2415.76</tavern>
@@ -65,6 +66,7 @@
 	</state>
 	<state>
 		<symbol>AL</symbol>
+		<population>721523</population>
 		<year>
 			<date>2007</date>
 			<tavern>658.60</tavern>
@@ -123,6 +125,7 @@
 	</state>
 	<state>
 		<symbol>AR</symbol>
+		<population>2926229</population>
 		<year>
 			<date>2007</date>
 			<tavern>1246.00</tavern>
@@ -186,6 +189,7 @@
 	</state>
 	<state>
 		<symbol>AZ</symbol>
+		<population>6412700</population>
 		<year>
 			<date>2007</date>
 			<tavern>15668.09</tavern>
@@ -249,6 +253,7 @@
 	</state>
 	<state>
 		<symbol>CA</symbol>
+		<population>37341989</population>
 		<year>
 			<date>2007</date>
 			<tavern>63557.26 </tavern>
@@ -312,6 +317,7 @@
 	</state>
 	<state>
 		<symbol>CO</symbol>
+		<population>5044930</population>
 		<year>
 			<date>2007</date>
 			<tavern>48316.88</tavern>
@@ -375,6 +381,7 @@
 	</state>
 	<state>
 		<symbol>CT</symbol>
+		<population>3581628</population>
 		<year>
 			<date>2007</date>
 			<tavern>2993.33</tavern>
@@ -438,6 +445,7 @@
 	</state>
 	<state>
 		<symbol>DE</symbol>
+		<population>900877</population>
 		<year>
 			<date>2007</date>
 			<tavern>2396.49</tavern>
@@ -501,6 +509,7 @@
 	</state>
 	<state>
 		<symbol>FL</symbol>
+		<population>18900773</population>
 		<year>
 			<date>2007</date>
 			<tavern>8376.90</tavern>
@@ -564,6 +573,7 @@
 	</state>
 	<state>
 		<symbol>GA</symbol>
+		<population>9727566</population>
 		<year>
 			<date>2007</date>
 			<tavern>3949.61</tavern>
@@ -627,6 +637,7 @@
 	</state>
 	<state>
 		<symbol>HI</symbol>
+		<population>1366862</population>
 		<year>
 			<date>2007</date>
 			<tavern>2728.47</tavern>
@@ -690,6 +701,7 @@
 	</state>
 	<state>
 		<symbol>IA</symbol>
+		<population>3053787</population>
 		<year>
 			<date>2007</date>
 			<tavern>6202.53</tavern>
@@ -753,6 +765,7 @@
 	</state>
 	<state>
 		<symbol>ID</symbol>
+		<population>1573499</population>
 		<year>
 			<date>2007</date>
 			<tavern>4246.57 </tavern>
@@ -816,6 +829,7 @@
 	</state>
 	<state>
 		<symbol>IL</symbol>
+		<population>12864380</population>
 		<year>
 			<date>2007</date>
 			<tavern>17948.66</tavern>
@@ -879,6 +893,7 @@
 	</state>
 	<state>
 		<symbol>IN</symbol>
+		<population>6501582</population>
 		<year>
 			<date>2007</date>
 			<tavern>7748.24</tavern>
@@ -942,6 +957,7 @@
 	</state>
 	<state>
 		<symbol>KS</symbol>
+		<population>2863813</population>
 		<year>
 			<date>2007</date>
 			<tavern>7207.89</tavern>
@@ -1005,6 +1021,7 @@
 	</state>
 	<state>
 		<symbol>KY</symbol>
+		<population>4305606</population>
 		<year>
 			<date>2007</date>
 			<tavern>4235.65</tavern>
@@ -1068,6 +1085,7 @@
 	</state>
 	<state>
 		<symbol>LA</symbol>
+		<population>4553962</population>
 		<year>
 			<date>2007</date>
 			<tavern>1455.94</tavern>
@@ -1131,6 +1149,7 @@
 	</state>
 	<state>
 		<symbol>MA</symbol>
+		<population>6559644</population>
 		<year>
 			<date>2007</date>
 			<tavern>10501.79</tavern>
@@ -1194,6 +1213,7 @@
 	</state>
 	<state>
 		<symbol>MD</symbol>
+		<population>5789929</population>
 		<year>
 			<date>2007</date>
 			<tavern>8744.83</tavern>
@@ -1257,6 +1277,7 @@
 	</state>
 	<state>
 		<symbol>ME</symbol>
+		<population>1333074</population>
 		<year>
 			<date>2007</date>
 			<tavern>4725.47 </tavern>
@@ -1320,6 +1341,7 @@
 	</state>
 	<state>
 		<symbol>MI</symbol>
+		<population>9911626</population>
 		<year>
 			<date>2007</date>
 			<tavern>20441.09</tavern>
@@ -1383,6 +1405,7 @@
 	</state>
 	<state>
 		<symbol>MN</symbol>
+		<population>531479</population>
 		<year>
 			<date>2007</date>
 			<tavern>8776.75</tavern>
@@ -1446,6 +1469,7 @@
 	</state>
 	<state>
 		<symbol>MO</symbol>
+		<population>6011478</population>
 		<year>
 			<date>2007</date>
 			<tavern>12709.32</tavern>
@@ -1509,6 +1533,7 @@
 	</state>
 	<state>
 		<symbol>MS</symbol>
+		<population>2978240</population>
 		<year>
 			<date>2007</date>
 			<bottle>61.48</bottle>
@@ -1570,6 +1595,7 @@
 	</state>
 	<state>
 		<symbol>MT</symbol>
+		<population>994416</population>
 		<year>
 			<date>2007</date>
 			<tavern>100.34</tavern>
@@ -1633,6 +1659,7 @@
 	</state>
 	<state>
 		<symbol>NC</symbol>
+		<population>956581</population>
 		<year>
 			<date>2007</date>
 			<tavern>13480.81 </tavern>
@@ -1696,6 +1723,7 @@
 	</state>
 	<state>
 		<symbol>ND</symbol>
+		<population>675905</population>
 		<year>
 			<date>2007</date>
 			<tavern>609.06</tavern>
@@ -1747,6 +1775,7 @@
 	</state>
 	<state>
 		<symbol>NE</symbol>
+		<population>1831825</population>
 		<year>
 			<date>2007</date>
 			<tavern>5259.89</tavern>
@@ -1810,6 +1839,7 @@
 	</state>
 	<state>
 		<symbol>NH</symbol>
+		<population>1321445</population>
 		<year>
 			<date>2007</date>
 			<tavern>3964.37</tavern>
@@ -1873,6 +1903,7 @@
 	</state>
 	<state>
 		<symbol>NJ</symbol>
+		<population>8807501</population>
 		<year>
 			<date>2007</date>
 			<tavern>5127.00</tavern>
@@ -1936,6 +1967,7 @@
 	</state>
 	<state>
 		<symbol>NM</symbol>
+		<population>2067273</population>
 		<year>
 			<date>2007</date>
 			<tavern>5818.64</tavern>
@@ -1999,6 +2031,7 @@
 	</state>
 	<state>
 		<symbol>NV</symbol>
+		<population>2709432</population>
 		<year>
 			<date>2007</date>
 			<tavern>15040.24</tavern>
@@ -2062,6 +2095,7 @@
 	</state>
 	<state>
 		<symbol>NY</symbol>
+		<population>19421055</population>
 		<year>
 			<date>2007</date>
 			<tavern>11320.37</tavern>
@@ -2125,6 +2159,7 @@
 	</state>
 	<state>
 		<symbol>OH</symbol>
+		<population>11568495</population>
 		<year>
 			<date>2007</date>
 			<tavern>7119.78</tavern>
@@ -2188,6 +2223,7 @@
 	</state>
 	<state>
 		<symbol>OK</symbol>
+		<population>3764882</population>
 		<year>
 			<date>2007</date>
 			<tavern>3905.71 </tavern>
@@ -2251,6 +2287,7 @@
 	</state>
 	<state>
 		<symbol>OR</symbol>
+		<population>3848606</population>
 		<year>
 			<date>2007</date>
 			<tavern>16962.21</tavern>
@@ -2314,6 +2351,7 @@
 	</state>
 	<state>
 		<symbol>PA</symbol>
+		<population>12734905</population>
 		<year>
 			<date>2007</date>
 			<tavern>20048.89</tavern>
@@ -2377,6 +2415,7 @@
 	</state>
 	<state>
 		<symbol>RI</symbol>
+		<population>1055247</population>
 		<year>
 			<date>2007</date>
 			<tavern>908.37</tavern>
@@ -2440,6 +2479,7 @@
 	</state>
 	<state>
 		<symbol>SC</symbol>
+		<population>4645975</population>
 		<year>
 			<date>2007</date>
 			<tavern>5280.88</tavern>
@@ -2503,6 +2543,7 @@
 	</state>
 	<state>
 		<symbol>SD</symbol>
+		<population>819761</population>
 		<year>
 			<date>2007</date>
 			<tavern>946.52</tavern>
@@ -2563,6 +2604,7 @@
 	</state>
 	<state>
 		<symbol>TN</symbol>
+		<population>6375431</population>
 		<year>
 			<date>2007</date>
 			<tavern>10370.86</tavern>
@@ -2626,6 +2668,7 @@
 	</state>
 	<state>
 		<symbol>TX</symbol>
+		<population>25268418</population>
 		<year>
 			<date>2007</date>
 			<tavern>7133.91</tavern>
@@ -2689,6 +2732,7 @@
 	</state>
 	<state>
 		<symbol>UT</symbol>
+		<population>2770765</population>
 		<year>
 			<date>2007</date>
 			<tavern>6300.55</tavern>
@@ -2752,6 +2796,7 @@
 	</state>
 	<state>
 		<symbol>VA</symbol>
+		<population>8037736</population>
 		<year>
 			<date>2007</date>
 			<tavern>11810.66</tavern>
@@ -2815,6 +2860,7 @@
 	</state>
 	<state>
 		<symbol>VT</symbol>
+		<population>630337</population>
 		<year>
 			<date>2007</date>
 			<tavern>3489.62</tavern>
@@ -2878,6 +2924,7 @@
 	</state>
 	<state>
 		<symbol>WA</symbol>
+		<population>6753369</population>
 		<year>
 			<date>2007</date>
 			<tavern>19697.39</tavern>
@@ -2941,6 +2988,7 @@
 	</state>
 	<state>
 		<symbol>WI</symbol>
+		<population>5698230</population>
 		<year>
 			<date>2007</date>
 			<tavern>15433.97</tavern>
@@ -3004,6 +3052,7 @@
 	</state>
 	<state>
 		<symbol>WV</symbol>
+		<population>1859815</population>
 		<year>
 			<date>2007</date>
 			<tavern>865.02</tavern>
@@ -3067,6 +3116,7 @@
 	</state>
 	<state>
 		<symbol>WY</symbol>
+		<population>568300</population>
 		<year>
 			<date>2007</date>
 			<tavern>322.24</tavern>

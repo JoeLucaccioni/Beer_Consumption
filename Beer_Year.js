@@ -2,7 +2,8 @@
 //By Joe Lucaccioni
 
 var beerXML, content ="Hello", c, year, type;
-var state = [];
+
+var State = [];
 
 $(document).ready(function(){
 	console.log("start!");
@@ -13,6 +14,7 @@ $(document).ready(function(){
 	success: getXML,
 	error: function(){alert("Error: Something went wrong");}
 	});
+	//waits for the user to hit the search button
 	$("#search-btn").click(lookup);
 });
 
@@ -26,11 +28,10 @@ function getXML(results){
 function lookup(){
     $('#searchresults').empty();
     
-    var year = $("#year").val();
-    var type = $("#type").val();
+    year = $("#year").val();//gets the year
+    type = $("#type").val();//gets the type
     
     var data = [];
-    var content = [];
     
     var d = beerXML.getElementsByTagName("date");
     
@@ -40,8 +41,12 @@ function lookup(){
 			var z = d[i].parentNode;
 			var x = z.parentNode;
 			
+			var s = x.childNodes[1].childNodes[0].nodeValue;
 			//gets the symbol of the state, e.g. AZ, IL, WI...
-			state.push(x.childNodes[1].childNodes[0].nodeValue);
+			State.push(x.childNodes[1].childNodes[0].nodeValue);
+			
+			//gets the population of the state
+			var population = parseFloat(x.childNodes[3].childNodes[0].nodeValue)
 			
 			var a = z.firstChild;
 			
@@ -53,12 +58,14 @@ function lookup(){
   					if (a.nodeType == 1){
   						if(a.nodeName != "date")
   							//changes the string into numbers and adds the data from all types together
-  							t += parseFloat(a.childNodes[0].nodeValue);
+  							t += parseInt(a.childNodes[0].nodeValue);
   					}
   					a = a.nextSibling;
   				}
-  				data.push(t);
-  				console.log("0st entry: "+data[0]);
+  				t *= 31;
+  				t = t/population;
+  				var b = t.toFixed(3).toString();
+  				data.push(b);
 			}
 			
 			//if a specific type is called, this is the search run
@@ -67,7 +74,11 @@ function lookup(){
   					// Process only element nodes (type 1)
   					if (a.nodeType == 1){
   						if(a.nodeName == type){
-  							data.push(a.childNodes[0].nodeValue);
+  							var t = parseInt(a.childNodes[0].nodeValue);		
+  							t *= 31;
+  							t = t/population;
+  							var b = t.toFixed(3).toString();
+  							data.push(b);
   						}
     				}
   					a = a.nextSibling;
@@ -79,7 +90,79 @@ function lookup(){
 	makeChart(data);
 }
 
-function makeChart(data){
+function makeChart(Data){
+	var x, y;
+	var width = 1000;
+	var height = width;
+	
+	var svg = d3.select("#searchresults")
+		.append("svg")
+		.attr("width", width)
+		.attr("height", height);
+    
+	var g = svg.selectAll("g")
+		.data(Data)
+		.enter()
+		.append("g")
+		.attr("transform", function(d, i) {
+      		return "translate(0,0)";
+   		})
+
+	g.append("circle")
+   		.attr("cx", function(d, i) {
+   			if(i<9)
+            	return i*100 + 50;
+            if(i>=9)
+            	return (i%9)*100 + 50;
+         })
+         
+         .attr("cy", function(d, i) {
+         	if(i<9)
+            	return 100;
+            if(i>=9){
+            	if((i%9 == 0)&&(i!=0))
+            		y = i/9;
+            	return 125*(y+1);}
+         })
+  
+         .attr("r", function(d) {
+         	if(d<=2)
+         		return 2;
+         	if((d>2)&&(d<80))
+         		return d;
+         	if(d>=80)
+         		return 80;
+         })
+         
+         .attr("fill", "orange")
+            
+	g.append("text")
+		.attr("x", function(d, i) {
+            if(i<9)
+            	return i*100 + 25;
+            if(i>=9)
+            	return (i%9)*100 + 25;
+         })
+         
+         .attr("y", function(d, i) {
+         	if(i<9)
+            	return 100;
+            if(i>=9){
+            	if(i%9 == 0)
+            		y = i/9;
+            	return 125*(y+1)+5;}
+         })
+         .attr("stroke", "teal")
+         .attr("font-size", "10px")
+         .attr("font-family", "sans-serif")
+         .text(function (d, i) {
+            console.log("d: " + d);
+            console.log("i: " + i);
+            return State[i]+": "+d;
+         });
+}
+
+/*function makeChart(data){
     	var paragraph = "";
     	paragraph = d3.select('#searchresults')
          .selectAll("p")
@@ -90,6 +173,8 @@ function makeChart(data){
             console.log("d: " + d);
             console.log("i: " + i);
             console.log("this: " + this);
-            return "The state is " + state[i] + " and the data is " + d;
-         });s
-}
+            return "The state is "+state[i]+" and the data is "+d;
+         });
+         
+    
+}*/
